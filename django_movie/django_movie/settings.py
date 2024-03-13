@@ -88,9 +88,6 @@ WSGI_APPLICATION = 'django_movie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'OPTIONS': {
-            'options': f"-c search_path={os.getenv('DB_SHAME')}"
-        },
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
